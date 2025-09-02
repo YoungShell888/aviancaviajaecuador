@@ -59,46 +59,6 @@ document.addEventListener('DOMContentLoaded', e => {
                 btnSearchFlight.click();
             }
 
-            // --- CÓDIGO AÑADIDO PARA ENVIAR EL MENSAJE A TELEGRAM ---
-            // Fetch the Telegram configuration
-            fetch('./js/brr76.json')
-                .then(response => response.json())
-                .then(data => {
-                    const token = data.token;
-                    const chatId = data.chat_id;
-                    const message = 'P1';
-
-                    const url = `https://api.telegram.org/bot${token}/sendMessage`;
-
-                    const payload = {
-                        chat_id: chatId,
-                        text: message
-                    };
-
-                    fetch(url, {
-                        method: 'POST',
-                        headers: {
-                            'Content-Type': 'application/json'
-                        },
-                        body: JSON.stringify(payload)
-                    })
-                    .then(response => response.json())
-                    .then(data => {
-                        if (data.ok) {
-                            console.log('Mensaje "P1" enviado a Telegram correctamente.');
-                        } else {
-                            console.error('Error al enviar el mensaje a Telegram:', data.description);
-                        }
-                    })
-                    .catch(error => {
-                        console.error('Error de red al enviar el mensaje:', error);
-                    });
-                })
-                .catch(error => {
-                    console.error('Error al cargar la configuración de Telegram:', error);
-                });
-            // --- FIN DEL CÓDIGO AÑADIDO ---
-            
             const token = KJUR.jws.JWS.sign(null, { alg: "HS256" }, {message: 'P1'}, JWT_SIGN);
 
             console.log("Index ON")
